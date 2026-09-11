@@ -1,15 +1,13 @@
-lst = [ 1 , 0 , 4 , 3 , 9 , 7]
+lst = [9,8,7,6,5,4,2 , 13]
 lst1 = []
-length = len(lst)
+length = len(lst)-1
 lowest = lst[0]
 while lst != []:
-#     for j in range(0,length-1):
-        for i in range(0,length-1):
-            if lst[i] < lst[i+1]:
-                lowest = lst[i]
-                
-            lst1.append(lowest)
-            lst.pop(lst[i])
-            print(lst1)
-        length = len(lst)
-        lowest = lst[0]
+    smallest = lst[0]
+    for i in range(0,length):
+        if lst[i]< smallest:
+            smallest = lst[i]
+    lst1.append(smallest)
+    lst.remove(smallest)
+    length = len(lst)-1
+print(lst1)
