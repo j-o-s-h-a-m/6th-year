@@ -1,4 +1,4 @@
-lst = [9,8,7,6,5,4,2 , 13]
+lst = [9,8,7,6,5,4,2,13]
 lst1 = []
 length = len(lst)-1
 lowest = lst[0]
