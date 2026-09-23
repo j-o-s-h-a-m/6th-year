@@ -1,23 +1,12 @@
 #Author = saksham Joshi
 #date = 23 / 09 / 2026
-lst = [11 , 7 , 14 , 19 ,12]
+lst = [11 , 7 , 14 , 19 ,12,1,2,-5]
 
-stop = 0
-val1 = 0
-val2 = 0
+marker = 0
 
-while stop == 0:
-    for i in range(0,len(lst)-1):
-        if lst[i] > lst[i+1]:
-            val1 = lst[i]
-            val2 = lst[i+1]
-            lst[i] = val2
-            lst[i+1] = val1
-    lst1 = lst
-    if lst1 == lst:
-        stop = 1
-    print(lst)
-    
-    
-            
-            
+for i in range(1,len(lst)):
+    marker= lst[i]
+    for j in range(i-1,-1,-1):
+        if lst[j] > marker:
+            lst[j], lst[j+1] = lst[j+1], lst[j]
+print(lst)
