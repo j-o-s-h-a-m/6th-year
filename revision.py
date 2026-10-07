@@ -7,18 +7,33 @@ def hola (mean):
         total += i
     average = total//count
     return average
-        
-        
-    
-stop = 0
-lst = []
-while stop == 0:
-    lst_in = input('Enter the number u want to add into a list(Press enter to end input: ')
-    if lst_in != '':
-        lst.append(lst_in)
+def hola1(median):
+    n = length
+    if n%2 == 0:
+        med = ((n/2)+((n/2)+1))//2
     else:
-        break
+        med = (n+1)/2
+    return med
+def hola3(mode):
+    count = 0
+    highest = 0
+    larget = 0
+    for i in lst:
+        count = lst.count(i)
+        if count >= highest:
+            largest = i
+            highest = count
+    return highest, largest
+    
+    
     
 
+lst = [1,2,3,3,4,5]
+length = len(lst)
+median1 = hola1(lst)
 average1 = hola(lst)
+mode1 = hola3(lst)
 print(average1)
+print(median1)
+print(mode1)
+
