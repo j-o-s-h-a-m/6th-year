@@ -1,5 +1,5 @@
 let total = 0
-let v1 = [1,2,3,3,4,5]
+let v1 = [1,2,3,3,4,5,6,7,7,7,7,7]
 
 for(let list of v1){
 
@@ -20,12 +20,13 @@ let count2 = 0
 let largest = 0
 let highest = 0 
 for(let i of v1){
+    count = 0
    for (let j of v1){ 
         if (j == i){
-            let count = count + 1
-            if (count > count2){
-                let count2 = count
-                let largest = i
+            count = count + 1
+            if (count >= count2){
+                 count2 = count
+                 largest = i
             }
         }
     }
